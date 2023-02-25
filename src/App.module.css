@@ -1,0 +1,32 @@
+.App {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  padding: 2%;
+  background-color: var(--backgroundWhite--color);
+  color: var(--secondary--color);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.AppDark {
+  background-color: var(--backgroundBlack--color);
+  color: var(--primary--color);
+}
+
+.button {
+  position: absolute;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  width: 104px;
+  padding: 11px 15px;
+  background-color: var(--third--color);
+  cursor: pointer;
+  font-weight: 600;
+  align-self: self-start;
+  right: 5%;
+
+}

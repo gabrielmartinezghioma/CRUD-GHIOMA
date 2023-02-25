@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import './App.css'
+import app from './App.module.css'
 import Load from './assets/Components/Load';
 import ProductsForm from './assets/Components/ProductsForm';
 import ProductsList from './assets/Components/ProductsList';
 import PopUp from './assets/Components/PopUp';
 import Error from './assets/Components/Error';
+import modeTheme from './custoomHooks/modeTheme';
 
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
   const [isUpdate, setIsUpdate,] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  //Function
+  const {isMode,buttonFunction}=modeTheme()
 
+  //Function
   function timeInScreen(setHook) {
     setHook(true)
     setTimeout(() => {
@@ -151,21 +153,16 @@ function App() {
     imagen={'edit.png'}
   />
 
-
-
   return (
-    <div className="App">
-      {isError && componentError}
-
-      {isLoad && componentLoad}
-      {isCreated && componentCreate}
-      {isDelete && componentDelete}
-      {isUpdate && componentEdit}
-
+    <div className={` ${app.App} ${isMode && app.AppDark}`}>
+      <button className={app.button} onClick={()=>buttonFunction()}>Change</button>
+      {/* {isError && componentError} */}
+      {/* {isLoad && componentLoad} */}
+      {/* {isCreated && componentCreate} */}
+      {/* {isDelete && componentDelete} */}
+      {/* {isUpdate && componentEdit} */}
       {componentProductsForm}
-
       {componentProductsList}
-
     </div>
   )
 }

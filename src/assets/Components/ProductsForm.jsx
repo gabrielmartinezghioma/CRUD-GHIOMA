@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
+import modeTheme from '../../custoomHooks/modeTheme';
+import form from './styles/form.module.css'
+
 
 const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendFormToApp }) => {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
-
+  const {isMode}=modeTheme();
 
   const getFormData = (data) => {
     if (sendAppToForm === null) {
@@ -41,57 +44,61 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
   }, [sendAppToForm])
 
   return (
-    <form className="form" onSubmit={handleSubmit(getFormData)}>
-      <div className='form__div'>
-        <label className="form__div--label" htmlFor="name-id">First Name</label>
-        <input className={`${ errors.first_name ? 'label__div--inputError' : 'label__div--input'} `}
+    <form className={` ${form.form} ${isMode && form.formDark}`} onSubmit={handleSubmit(getFormData)}>
+      <div className={`${form.formDiv}`}>
+        <label  className={`${form.formLabel}`} htmlFor="name-id">First Name</label>
+        <input className={ `${errors.first_name ? form.formInputError :form.formInput }`}
           type="text"
           id="name-id"
           {...register('first_name', { required: true })}
+          autoComplete="off"
         />
       </div>
 
-      <div className='form__div'>
-        <label className="form__div--label" htmlFor="lastName-id">Last Name </label>
-        <input className={`${ errors.last_name ? 'label__div--inputError' : 'label__div--input'} `}
+      <div  className={`${form.formDiv}`}>
+        <label className={`${form.formLabel}`} htmlFor="lastName-id">Last Name </label>
+        <input  className={ `${errors.last_name ? form.formInputError :form.formInput }`}
           type="text"
           id="lastName-id"
           {...register('last_name', { required: true })}
+          autoComplete="off"
         />
-     
       </div>
 
-      <div className='form__div'>
-        <label className="form__div--label" htmlFor="email-id">Email</label>
-        <input className={`${ errors.email ? 'label__div--inputError' : 'label__div--input'} `}
+      <div  className={`${form.formDiv}`}>
+        <label className={`${form.formLabel}`} htmlFor="email-id">Email</label>
+        <input  className={ `${errors.email ? form.formInputError :form.formInput }`}
           type="email"
           id="email-id"
           {...register('email', { required: true })}
+          autoComplete="off"
         />
       
       </div>
 
-      <div className='form__div'>
-        <label className="form__div--label" htmlFor="password-id">Password</label>
-        <input className={`${ errors.password ? 'label__div--inputError' : 'label__div--input'} `}
+      <div  className={`${form.formDiv}`}>
+        <label className={`${form.formLabel}`} htmlFor="password-id">Password</label>
+        <input className={ `${errors.password ? form.formInputError :form.formInput }`}
           type="password"
           id="password-id"
           {...register('password', { required: true })}
+          autoComplete="off"
         />
        
       </div>
 
-      <div className='form__div'>
-        <label className="form__div--label " htmlFor="birthday-id">Birthday</label>
-        <input className={`${ errors.birthday ? 'label__div--inputError' : 'label__div--input'} `}
+      <div  className={`${form.formDiv}`}>
+        <label className={`${form.formLabel}`} htmlFor="birthday-id">Birthday</label>
+        <input  className={ `${errors.birthday ? form.formInputError :form.formInput }`}
           type="date"
           id="birthday-id"
           {...register('birthday', { required: true })}
+          autoComplete="off"
         />
      
       </div>
     
-      <button className="form-button" type='submit'>{submitButton}</button>
+      <button className={`${form.button}`} type='submit'>{submitButton}</button>
     </form>
 
   );

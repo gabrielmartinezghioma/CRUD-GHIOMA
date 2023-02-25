@@ -1,0 +1,79 @@
+.form {
+  background: var(--bgBox);
+  font-weight: 600;
+  width: 650px;
+  padding: 2%;
+  border-radius: 8px;
+  border: 1px solid var(--fifty--color);
+  box-shadow: rgb(0 0 0 / 15%) 0px 0.5px 1.5px 0px;
+  margin-top: 3%;
+}
+
+.formDark {
+  background: var(--bgBoxDark);
+  border: 1px solid var(--secondary--color);
+}
+
+.formDiv {
+  width: 100%;
+  border-bottom: 1px solid var(--fifty--color);
+  margin-bottom: 10px;
+}
+
+.formLabel {
+  cursor: pointer;
+}
+
+.formInput {
+  margin: 5px 0 2px 0;
+  padding: 0;
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--forty--color);
+  font-weight: 600;
+}
+.formInputError{
+  background-color: var(--third--color);
+  margin: 5px 0 2px 0;
+  padding: 0;
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--forty--color);
+  
+  font-weight: 600;
+}
+
+.button {
+  border: 1px solid;
+  color: var(--third--color);
+  border-radius: 20px;
+  width: 104px;
+  padding: 11px 15px;
+  margin: 20px 2px 5px 430px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.5s, background-color 0.5s, border 0.5s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+ display: none;
+}
+
+.button:active{
+  transform: scale(90%);
+}
+
+.button:hover{
+  color: var(--primary--color);
+  background-color: var(--third--color);
+  border: 1px solid var(--third--color);
+  transition: color 0.5s, background-color 0.5s, border 0.5s;
+
+}
