@@ -52,7 +52,7 @@
 
 .div {
   position: relative;
-  margin-top: 60px;
+  margin: 60px 0 40px 0;
   width: 90%;
   padding: 2% 0;
   background-color: var(--primary--color);
@@ -71,9 +71,11 @@
 .divDark {
   background: var(--bgBoxDark);
 }
-.divTextNone{
+
+.divTextNone {
   display: none;
 }
+
 .divTetx {
   display: flex;
   justify-content: flex-start;
@@ -111,12 +113,17 @@
 @media screen and (max-width: 870px) {
 
   .App {
-   
+
     padding: 20px 2% 2% 2%;
-  
+
   }
+
+  .div {
+    margin: 60px 0;
+  }
+
   .divTetx {
-   display: none;
+    display: none;
   }
 
 }
