@@ -154,15 +154,15 @@ function App() {
   />
 
   return (
-    <div className={` ${app.App} ${isMode && app.AppDark}`}>
-      <button className={`${app.button} ${isMode && app.buttonDark}`} onClick={() => buttonFunction()}>Change theme</button>
+    <div className={` ${app.App} ${isMode!=true && app.AppDark}`}>
+      <button className={`${app.button} ${isMode!=true && app.buttonDark}`} onClick={() => buttonFunction()}>Change theme</button>
       {/* {isError && componentError} */}
       {/* {isLoad && componentLoad} */}
       {/* {isCreated && componentCreate} */}
       {/* {isDelete && componentDelete} */}
       {/* {isUpdate && componentEdit} */}
       {componentProductsForm}
-      <div className={`${data.length>0 ? `${app.div} ${isMode && app.divDark}` :app.divTextNone}`}>
+      <div className={`${data.length>0 ? `${app.div} ${isMode!=true && app.divDark}` :app.divTextNone}`}>
         <div className={`${data.length>0 ? app.divTetx : app.divTextNone}`}>
           <h2 className={app.divTetxH2}>First Name</h2>
           <h2 className={app.divTetxH2}>Last Name</h2>

@@ -44,7 +44,7 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
   }, [sendAppToForm])
 
   return (
-    <form className={` ${form.form} ${isMode && form.formDark}`} onSubmit={handleSubmit(getFormData)}>
+    <form className={` ${form.form} ${isMode!=true && form.formDark}`} onSubmit={handleSubmit(getFormData)}>
       <div className={`${form.formDiv}`}>
         <label  className={`${form.formLabel}`} htmlFor="name-id">First Name</label>
         <input className={ `${errors.first_name ? form.formInputError :form.formInput }`}
