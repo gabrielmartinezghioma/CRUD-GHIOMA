@@ -15,7 +15,7 @@
 ## See live example
 
 [https://ghiomausers.netlify.app/](https://ghiomausers.netlify.app/)
-<!-- ![Image text](https://github.com/gabrielmartinezghioma/CRUD-GHIOMA/blob/main/public/screen.png) -->
+<!-- ![Image text](https://raw.githubusercontent.com/gabrielmartinezghioma/CRUD-GHIOMA/main/public/screen.png) -->
 
 ## Installation 
 
