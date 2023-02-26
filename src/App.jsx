@@ -33,7 +33,7 @@ function App() {
   const getData = async () => {
     setIsLoad(true)
     try {
-      const reply = await axios.get('http://localhost:8080/users/')
+      const reply = await axios.get('https://users-crud-2h1r.onrender.com/users')
       if (reply.status === 200) {
         useData(reply.data)
       }
@@ -55,7 +55,7 @@ function App() {
     const postData = async () => {
       setIsLoad(true)
       try {
-        const reply = await axios.post('http://localhost:8080/users', body);
+        const reply = await axios.post('https://users-crud-2h1r.onrender.com/users', body);
         if (reply.status === 201) {
           getData();
           timeInScreen(setIsCreated);
@@ -76,7 +76,7 @@ function App() {
     const deleteData = async () => {
       setIsLoad(true)
       try {
-        const reply = await axios.delete(`http://localhost:8080/users/${body.id}/`);
+        const reply = await axios.delete(`https://users-crud-2h1r.onrender.com/users/${body.id}/`);
         if (reply.status === 204) {
           getData();
           timeInScreen(setIsDelete);
@@ -104,7 +104,7 @@ function App() {
     const putData = async () => {
       setIsLoad(true)
       try {
-        const reply = await axios.put(`http://localhost:8080/users/${body.id}/`, body);
+        const reply = await axios.put(`https://users-crud-2h1r.onrender.com/users/${body.id}/`, body);
         if (reply.status === 200) {
           getData();
           timeInScreen(setIsUpdate);
