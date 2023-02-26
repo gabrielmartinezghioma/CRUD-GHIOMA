@@ -33,7 +33,7 @@ function App() {
   const getData = async () => {
     setIsLoad(true)
     try {
-      const reply = await axios.get('http://localhost:8080/users')
+      const reply = await axios.get('http://localhost:8080/users/')
       if (reply.status === 200) {
         useData(reply.data)
       }
@@ -162,9 +162,8 @@ function App() {
       {/* {isDelete && componentDelete} */}
       {/* {isUpdate && componentEdit} */}
       {componentProductsForm}
-
-      <div className={` ${app.div} ${isMode && app.divDark}`}>
-        <div className={app.divTetx}>
+      <div className={`${data.length>0 ? `${app.div} ${isMode && app.divDark}` :app.divTextNone}`}>
+        <div className={`${data.length>0 ? app.divTetx : app.divTextNone}`}>
           <h2 className={app.divTetxH2}>First Name</h2>
           <h2 className={app.divTetxH2}>Last Name</h2>
           <h2 className={app.divTetxH2}>Email</h2>

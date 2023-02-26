@@ -71,7 +71,9 @@
 .divDark {
   background: var(--bgBoxDark);
 }
-
+.divTextNone{
+  display: none;
+}
 .divTetx {
   display: flex;
   justify-content: flex-start;
