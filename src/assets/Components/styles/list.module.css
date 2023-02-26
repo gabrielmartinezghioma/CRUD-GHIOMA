@@ -1,4 +1,4 @@
-.ul{
+.ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-.ulLi{
+.ulLi {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,43 +16,44 @@
   position: relative;
 }
 
-.liH2{
+.liH2 {
   text-align: start;
   overflow: hidden;
   padding: 0 20px 0 0;
 }
 
-.liH2:nth-child(1){
+.liH2:nth-child(1) {
   width: calc(100%/7);
   text-align: start;
   overflow: hidden;
   padding: 0 20px 0 0;
 }
 
-.liH2:nth-child(2){
+.liH2:nth-child(2) {
   width: calc(100%/7);
   text-align: start;
   overflow: hidden;
 }
 
-.liH2:nth-child(3){
+.liH2:nth-child(3) {
   width: calc(100%/3);
   text-align: start;
   overflow: hidden;
 }
 
-.liH2:nth-child(4){
+.liH2:nth-child(4) {
   width: calc(100%/5);
   text-align: start;
   overflow: hidden;
 }
-.liH2:nth-child(5){
+
+.liH2:nth-child(5) {
   width: calc(100%/5.52);
   text-align: start;
   overflow: hidden;
 }
 
-.ulLiDiv{
+.ulLiDiv {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -61,56 +62,100 @@
   column-gap: 20px;
 }
 
-.divbutton{
+.divbutton {
   padding: 1%;
   cursor: pointer;
 }
 
-.divImg{
+.divImg {
   width: 25px;
-  transition: transform 0.5s,opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
   filter: grayscale(20%);
 }
 
-.divImg:hover{
+.divImg:hover {
   opacity: 0.5;
   transition: opacity 0.7s;
 }
-.divImg:active{
+
+.divImg:active {
   transform: scale(80%);
   transition: transform 0.5s;
 }
 
+.span {
+  display: none;
+}
 
-@media screen and (max-width: 900px) {
-  .ulLi{
+
+@media screen and (max-width: 870px) {
+  .ulLi {
     flex-direction: column;
   }
 
-  .liH2:nth-child(1){
+  .liH2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .span {
+    display: block;
+    min-width: 90px;
+    margin: 0;
+    border-right: 1px solid var(--forty--color);
+  }
+
+  .liH2:nth-child(1) {
     width: 100%;
-   
   }
 
 
-  .liH2:nth-child(2){
+  .liH2:nth-child(2) {
     width: 100%;
-  
+
   }
-  
-  .liH2:nth-child(3){
+
+  .liH2:nth-child(3) {
     width: 100%;
-    
+
   }
-  
-  .liH2:nth-child(4){
+
+  .liH2:nth-child(4) {
     width: 100%;
+
+  }
+
+  .liH2:nth-child(5) {
+    width: 100%;
+
+  }
+
+  .h2Span {
+    margin-left: 10px;
+  }
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .span {
+
+    min-width: 75px;
    
   }
-  .liH2:nth-child(5){
-    width: 100%;
-   
+  .liH2 {
+    font-size: 0.8rem;
   }
- 
+
+  .ulLiDiv {
+    right: 10px;
+    column-gap: 10px;
+  }
+
+  .divImg {
+    width: 20px;
+  }
 
 }

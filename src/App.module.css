@@ -106,7 +106,7 @@
   text-align: start;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 870px) {
   .divTetx {
    display: none;
   }

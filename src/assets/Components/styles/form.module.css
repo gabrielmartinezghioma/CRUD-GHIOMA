@@ -80,6 +80,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media screen and (max-width: 900px) {
+  .form{
+    width: 90%;
+    padding: 30px;
+  }
 
+  .button{
+    margin:20px 2px 5px 70% ;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .button{
+    margin:20px 2px 5px 60% ;
+  }
+
+}
+
+@media screen and (max-width: 380px) {
+  .button{
+    margin:20px 2px 5px 50% ;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  .button{
+    margin:20px 2px 5px 40% ;
+  }
 
 }
