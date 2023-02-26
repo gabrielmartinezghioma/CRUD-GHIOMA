@@ -82,3 +82,35 @@
 }
 
 
+@media screen and (max-width: 900px) {
+  .ulLi{
+    flex-direction: column;
+  }
+
+  .liH2:nth-child(1){
+    width: 100%;
+   
+  }
+
+
+  .liH2:nth-child(2){
+    width: 100%;
+  
+  }
+  
+  .liH2:nth-child(3){
+    width: 100%;
+    
+  }
+  
+  .liH2:nth-child(4){
+    width: 100%;
+   
+  }
+  .liH2:nth-child(5){
+    width: 100%;
+   
+  }
+ 
+
+}

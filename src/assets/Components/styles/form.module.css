@@ -45,8 +45,9 @@
   width: 100%;
   cursor: pointer;
   font-size: 1rem;
-  color: var(--forty--color);
+  color: var(--primary--color);
   font-weight: 600;
+  opacity: 0.7;
 }
 
 .button {
@@ -75,5 +76,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: var(--third--color);
   border: 1px solid var(--third--color);
   transition: color 0.5s, background-color 0.5s, border 0.5s;
+
+}
+
+@media screen and (max-width: 900px) {
+
 
 }
