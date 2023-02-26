@@ -1,8 +1,9 @@
 ## Description  
 
-  This project is an example of a full-stack application built entirely by me. The front-end has been developed with React JS, using Redux and React Hook Form. In addition, APIs that I created using Postgres, Sequelize, and Node.js have been consumed. The purpose of this application is to allow the creation, editing, and updating of user information, as well as the ability to delete them.
+ This project is a complete web application (full stack) built entirely by me. The front-end has been developed with React JS, using Redux and React Hook Form. Additionally, an API that I developed using Postgres, Sequelize, and Node.js is consumed. The purpose of this application is to allow the creation, editing, and updating of user information, as well as deleting them.
 
-  Este proyecto es una muestra de una aplicación de pila completa (full stack) construida completamente por mí. El front-end se ha desarrollado con React JS, utilizando Redux y React Hook Form. Además, se han consumido APIs que he creado utilizando Postgres, Sequelize y Node.js. La finalidad de esta aplicación es permitir la creación, edición y actualización de información de usuarios, así como también la posibilidad de eliminarlos.
+
+Este proyecto es una aplicación web completa (full stack) construida completamente por mí. El front-end se ha desarrollado con React JS, utilizando Redux y React Hook Form. Además, se consume una API que desarrolle usando Postgres, Sequelize y Node.js. La finalidad de esta aplicación es permitir la creación, edición y actualización de información de usuarios, como así también eliminarlos.
 
 
 ## Author 
