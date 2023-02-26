@@ -2,8 +2,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import app from './App.module.css'
 import Load from './assets/Components/Load';
-import ProductsForm from './assets/Components/ProductsForm';
-import ProductsList from './assets/Components/ProductsList';
+import ProductsForm from './assets/Components/UsersForm';
+import ProductsList from './assets/Components/UsersList';
 import PopUp from './assets/Components/PopUp';
 import Error from './assets/Components/Error';
 import modeTheme from './custoomHooks/modeTheme';
@@ -19,7 +19,7 @@ function App() {
   const [isUpdate, setIsUpdate,] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const {isMode,buttonFunction}=modeTheme()
+  const { isMode, buttonFunction } = modeTheme()
 
   //Function
   function timeInScreen(setHook) {
@@ -96,7 +96,7 @@ function App() {
   // PUT request 
   const modifyObject = (body) => {
     setUpdateProducts(body);
-    scrollTo(0,0)
+    scrollTo(0, 0)
   }
 
   const sendFormToApp = (body) => {
@@ -155,14 +155,24 @@ function App() {
 
   return (
     <div className={` ${app.App} ${isMode && app.AppDark}`}>
-      <button className={app.button} onClick={()=>buttonFunction()}>Change</button>
+      <button className={`${app.button} ${isMode && app.buttonDark}`} onClick={() => buttonFunction()}>Change theme</button>
       {/* {isError && componentError} */}
       {/* {isLoad && componentLoad} */}
       {/* {isCreated && componentCreate} */}
       {/* {isDelete && componentDelete} */}
       {/* {isUpdate && componentEdit} */}
       {componentProductsForm}
-      {componentProductsList}
+
+      <div className={` ${app.div} ${isMode && app.divDark}`}>
+        <div className={app.divTetx}>
+          <h2 className={app.divTetxH2}>First Name</h2>
+          <h2 className={app.divTetxH2}>Last Name</h2>
+          <h2 className={app.divTetxH2}>Email</h2>
+          <h2 className={app.divTetxH2}>Password</h2>
+          <h2 className={app.divTetxH2}>Birthdayd</h2>
+        </div>
+        {componentProductsList}
+      </div>
     </div>
   )
 }

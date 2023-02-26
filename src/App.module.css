@@ -21,12 +21,86 @@
   position: absolute;
   font-size: 0.8rem;
   border-radius: 20px;
-  width: 104px;
+  width: 140px;
   padding: 11px 15px;
   background-color: var(--third--color);
+  border: 1px solid var(--third--color);
+  color: var(--primary--color);
   cursor: pointer;
   font-weight: 600;
   align-self: self-start;
   right: 5%;
-
 }
+
+.button:active{
+  transform: scale(90%);
+}
+
+.button:hover{
+  color: var(--third--color);
+  background-color: var( --backgroundWhite--color);
+  border: 1px solid var( --third--color);
+  transition: color 0.5s, background-color 0.5s, border 0.5s;
+}
+
+.buttonDark:hover{
+  color: var(--third--color);
+  background-color: var( --bgBoxDark);
+  border: 1px solid var( --third--color);
+  transition: color 0.5s, background-color 0.5s, border 0.5s;
+}
+
+.div {
+  position: relative;
+  margin-top: 60px;
+  width: 90%;
+  padding: 2% 0;
+  background-color: var(--primary--color);
+  color: var(--forty--color);
+  box-shadow: rgb(0 0 0 / 15%) 0px 0.5px 1.5px 0px;
+  display: flex;
+  padding: 1%;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.divDark{
+  background: var(--bgBoxDark);
+}
+
+.divTetx{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 20px 10% 10px 2%;
+  border-bottom: 1px solid var(--forty--color);
+}
+
+.divTetxH2:nth-child(1){
+  width: calc(100%/7);
+  text-align: start;
+}
+.divTetxH2:nth-child(2){
+  width: calc(100%/7);
+  text-align: start;
+}
+.divTetxH2:nth-child(3){
+  width: calc(100%/3);
+  text-align: start;
+}
+.divTetxH2:nth-child(4){
+  width: calc(100%/5);
+  text-align: start;
+}
+.divTetxH2:nth-child(5){
+  width: calc(100%/5.52);
+  text-align: start;
+}
+
+
+
