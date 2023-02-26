@@ -158,9 +158,9 @@ function App() {
       <button className={`${app.button} ${isMode!=true && app.buttonDark}`} onClick={() => buttonFunction()}>Change theme</button>
       {isError && componentError}
       {isLoad && componentLoad}
-      {/* {isCreated && componentCreate} */}
-      {/* {isDelete && componentDelete} */}
-      {/* {isUpdate && componentEdit} */}
+      {isCreated && componentCreate}
+      {isDelete && componentDelete}
+      {isUpdate && componentEdit}
       {componentProductsForm}
       <div className={`${data.length>0 ? `${app.div} ${isMode!=true && app.divDark}` :app.divTextNone}`}>
         <div className={`${data.length>0 ? app.divTetx : app.divTextNone}`}>
