@@ -1,0 +1,50 @@
+.div{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var( --primary--color);
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.divDark{
+  background: var( --secondary--color);
+}
+
+.divH2{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var( --third--color);
+  margin: 80px;
+  text-align: center;
+}
+
+.divImg{
+  filter: grayscale(100%);
+  width: 270px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .divH2{
+    font-size: 2rem;
+    margin: 5%;
+    
+  }
+  
+  .divImg{
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  
+  .divImg{
+    width: 180px;
+  }
+}

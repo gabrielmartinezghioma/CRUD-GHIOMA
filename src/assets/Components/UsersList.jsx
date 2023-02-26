@@ -18,6 +18,7 @@ const UsersList = ({ dataForm, deleteButton, modifyButton, deleteObeject, modify
             <button className={users.divbutton} onClick={() => modifyObject(obejectForm)}>{<img className={users.divImg} src={`${modifyButton}`} alt="modify" />}</button>
             <button className={users.divbutton} onClick={() => deleteObeject(obejectForm)}>{<img className={users.divImg} src={`${deleteButton}`} alt="delete" />}</button>
           </div>
+          
         </li>
       
       )}
