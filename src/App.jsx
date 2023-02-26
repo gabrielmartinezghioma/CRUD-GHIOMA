@@ -157,7 +157,7 @@ function App() {
     <div className={` ${app.App} ${isMode!=true && app.AppDark}`}>
       <button className={`${app.button} ${isMode!=true && app.buttonDark}`} onClick={() => buttonFunction()}>Change theme</button>
       {isError && componentError}
-      {/* {isLoad==false && componentLoad} */}
+      {isLoad && componentLoad}
       {/* {isCreated && componentCreate} */}
       {/* {isDelete && componentDelete} */}
       {/* {isUpdate && componentEdit} */}
