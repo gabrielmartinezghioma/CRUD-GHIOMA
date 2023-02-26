@@ -109,6 +109,12 @@
 }
 
 @media screen and (max-width: 870px) {
+
+  .App {
+   
+    padding: 20px 2% 2% 2%;
+  
+  }
   .divTetx {
    display: none;
   }
